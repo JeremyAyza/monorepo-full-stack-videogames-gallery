@@ -58,3 +58,10 @@
 - [x] Formulario controlado sin dependencias externas
 - [x] Separación clara del frontend y backend en un entorno monorepo
 
+## 🚀 Futuras mejoras
+
+- 🧠 Mejora del diseño UI
+- 🔒 Autenticación de usuarios
+- 🌍 Deploy completo con frontend y backend en servidores separados
+- 📊 Testeo más robusto de rutas y componentes
+
