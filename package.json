@@ -1,0 +1,42 @@
+{
+  "name": "pokemon-gallery-monorepo",
+  "version": "1.0.0",
+  "description": "Fullstack Pokémon Gallery - A complete CRUD application for managing Pokémon data with React frontend and Node.js backend",
+  "private": true,
+  "workspaces": [
+    "api",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:client\"",
+    "dev:api": "cd api && npm run start",
+    "dev:client": "cd client && npm start",
+    "build": "npm run build:client",
+    "build:client": "cd client && npm run build",
+    "test": "npm run test:api && npm run test:client",
+    "test:api": "cd api && npm test",
+    "test:client": "cd client && npm test",
+    "install:all": "npm install && cd api && npm install && cd ../client && npm install",
+    "clean": "rm -rf node_modules api/node_modules client/node_modules client/build"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "keywords": [
+    "pokemon",
+    "react",
+    "nodejs",
+    "express",
+    "postgresql",
+    "sequelize",
+    "redux",
+    "monorepo",
+    "fullstack"
+  ],
+  "author": "Jeremy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremy/pokemon-gallery-monorepo"
+  }
+}

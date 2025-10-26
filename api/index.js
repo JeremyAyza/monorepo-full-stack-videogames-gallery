@@ -17,19 +17,24 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+require('dotenv').config();
 const server = require('./src/app.js');
 const { populateTypesOnDB } = require('./src/controllers/type.controller.js');
 const { conn } = require('./src/db');
 
+const PORT = process.env.PORT || 3001;
+
 // Syncing all the models at once.
 conn.sync()
 	.then(() => {
-		server.listen(3001, () => {
-			console.log('Server listening on 3001');
+		server.listen(PORT, () => {
+			console.log(`🚀 Server listening on port ${PORT}`);
+			console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
 			//se llena la tabla tipos en la db con la api externa, si es que es necesario
 			populateTypesOnDB();
 		});
 	})
 	.catch((err) => {
-		console.error(`Error syncing database: ${err.message}`);
+		console.error(`❌ Error syncing database: ${err.message}`);
+		process.exit(1);
 	});

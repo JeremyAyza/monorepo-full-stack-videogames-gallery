@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# 🎮 Pokémon Gallery Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React frontend application for the Pokémon Gallery with Redux state management and modern UI components.
 
-## Available Scripts
+## 📦 Tech Stack
 
-In the project directory, you can run:
+- **React 18** - Frontend library
+- **Redux** - State management
+- **React Router** - Client-side routing
+- **CSS Modules** - Component styling
+- **Axios** - HTTP client for API calls
 
-### `npm start`
+## 🚀 Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js >= 14
+- npm >= 6
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies
+npm install
 
-### `npm run build`
+# Start development server
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will be available at `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ✨ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🔍 **Search Pokémon** - Find Pokémon by name
+- 🏷️ **Filter by Type** - Filter Pokémon by their types
+- 📊 **Sort Options** - Sort by name or attack power
+- 📄 **Pagination** - Navigate through large Pokémon lists
+- 🎨 **Pokémon Details** - Detailed view with stats and information
+- ➕ **Create Pokémon** - Add custom Pokémon to the database
+- 📱 **Responsive Design** - Works on desktop and mobile
 
-### `npm run eject`
+## 🎯 Pages & Components
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pages
+- **Landing Page** - Welcome screen with navigation
+- **Home** - Main Pokémon gallery with filters and pagination
+- **Search Results** - Search results display
+- **Pokémon Detail** - Individual Pokémon information
+- **Create Pokémon** - Form to add new Pokémon
+- **About** - Project information
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Key Components
+- **Navbar** - Navigation component
+- **Card** - Pokémon card display
+- **Filter** - Search and filter controls
+- **Pagination** - Page navigation
+- **Search** - Search functionality
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🗂️ Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+client/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # Reusable UI components
+│   │   ├── About/
+│   │   ├── Card/
+│   │   ├── LandingPage/
+│   │   ├── Navbar/
+│   │   ├── NotFound/
+│   │   └── Pagination/
+│   ├── containers/     # Page components
+│   │   ├── Create/
+│   │   ├── Filter/
+│   │   ├── Home/
+│   │   ├── PkDetail/
+│   │   └── Search/
+│   ├── actions/        # Redux actions
+│   ├── reducer/        # Redux reducers
+│   ├── store/          # Redux store configuration
+│   ├── assets/         # Images and static files
+│   ├── App.js          # Main app component
+│   └── index.js        # Entry point
+└── package.json        # Dependencies and scripts
+```
 
-## Learn More
+## 🎨 Styling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application uses CSS Modules for component-specific styling, ensuring:
+- Scoped styles
+- No CSS conflicts
+- Maintainable code
+- Component isolation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔄 State Management
 
-### Code Splitting
+Redux is used for global state management with:
+- **Actions** - Define what can happen
+- **Reducers** - Specify how state changes
+- **Store** - Centralized state container
+- **Thunk** - Handle async operations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Available Scripts
 
-### Analyzing the Bundle Size
+- `npm start` - Start development server
+- `npm test` - Run tests
+- `npm run build` - Build for production
+- `npm run eject` - Eject from Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 API Integration
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The client communicates with the backend API for:
+- Fetching Pokémon data
+- Creating new Pokémon
+- Updating Pokémon information
+- Deleting Pokémon
+- Type management

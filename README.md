@@ -1,67 +1,90 @@
-<h1 align="center">🧬 Pokémon Fullstack SPA</h1>
-<p align="center">A fullstack monorepo project for creating and managing Pokémon data. Includes search, filtering, sorting, and creation of custom Pokémon.</p>
+# Pokémon Gallery Monorepo
 
-<p align="center">
-  <a href="https://reactjs.org"><img src="https://img.shields.io/badge/React-17-blue?logo=react" /></a>
-  <a href="https://redux.js.org"><img src="https://img.shields.io/badge/Redux-State-purple?logo=redux" /></a>
-  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-14-green?logo=node.js" /></a>
-  <a href="https://expressjs.com"><img src="https://img.shields.io/badge/Express-Server-grey?logo=express" /></a>
-  <a href="https://sequelize.org"><img src="https://img.shields.io/badge/Sequelize-ORM-blue?logo=sequelize" /></a>
-  <a href="https://www.postgresql.org"><img src="https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql" /></a>
-</p>
+A fullstack Pokémon management application demonstrating modern web development practices.
 
-<p align="center">
-  <a href="#-features">✨ Features</a> •
-  <a href="#-tech-stack">📦 Tech Stack</a>
-</p>
+## 🎯 Project Overview
 
----
+This monorepo contains a complete fullstack application for managing Pokémon data with the following features:
 
-## 📸 Demo
+- **Frontend**: React application with Redux state management
+- **Backend**: Node.js REST API with Express and PostgreSQL
+- **Database**: PostgreSQL with Sequelize ORM
+- **External API**: Integration with PokéAPI
 
-> Live Demo: *(deployment opcional, puede agregarse más adelante)*
+## 🏗️ Architecture
 
----
+```
+pokemon-gallery-monorepo/
+├── api/          # Backend Node.js application
+├── client/       # Frontend React application
+├── package.json  # Root workspace configuration
+└── README.md     # This file
+```
 
-## ✨ Features
+## 🚀 Quick Start
 
-- 🔎 Búsqueda de Pokémon por nombre
-- 🔢 Filtrado por tipo y origen (API o creados)
-- ↕️ Ordenamiento alfabético o por fuerza de ataque
-- 📄 Vista de detalle de Pokémon con todos sus stats
-- 🧾 Creación de nuevos Pokémon mediante formulario validado manualmente
-- 🌐 Consumo de la [PokéAPI](https://pokeapi.co/)
-- 💾 Almacenamiento y persistencia en PostgreSQL usando Sequelize
+1. **Clone and Install**
+   ```bash
+   git clone <repository-url>
+   cd pokemon-gallery-monorepo
+   npm run install:all
+   ```
 
----
+2. **Configure Environment**
+   ```bash
+   cp api/env.example api/.env
+   # Edit api/.env with your database credentials
+   ```
 
-## 📦 Tech Stack
+3. **Start Development**
+   ```bash
+   npm run dev
+   ```
 
-| Tecnología     | Rol en el Proyecto                          |
-|----------------|---------------------------------------------|
-| **React**      | Construcción del frontend SPA               |
-| **Redux**      | Manejo de estado global                     |
-| **Node.js**    | Entorno del backend                         |
-| **Express.js** | Framework para construir el servidor        |
-| **Sequelize**  | ORM para la conexión con PostgreSQL         |
-| **PostgreSQL** | Base de datos relacional                    |
-| **CSS Modules**| Estilización sin librerías externas         |
+## 📋 Prerequisites
 
----
+- Node.js >= 14
+- PostgreSQL >= 12
+- npm >= 6
 
-## 🧠 Learnings & Highlights
+## 🔧 Available Scripts
 
-- [x] Consumo y normalización de datos desde API externa
-- [x] Diseño y relación de modelos en base de datos relacional
-- [x] Creación de REST API con control de rutas, errores y validaciones
-- [x] Renderizado dinámico, paginación y navegación con React Router
-- [x] Formulario controlado sin dependencias externas
-- [x] Separación clara del frontend y backend en un entorno monorepo
+- `npm run dev` - Start both frontend and backend
+- `npm run dev:api` - Start only backend
+- `npm run dev:client` - Start only frontend
+- `npm run build` - Build frontend for production
+- `npm test` - Run all tests
+- `npm run install:all` - Install all dependencies
 
-## 🚀 Futuras mejoras
+## 📚 Documentation
 
-- 🧠 Mejora del diseño UI
-- 🔒 Autenticación de usuarios
-- 🌍 Deploy completo con frontend y backend en servidores separados
-- 📊 Testeo más robusto de rutas y componentes
+- [API Documentation](./api/README.md)
+- [Client Documentation](./client/README.md)
 
+## 🛠️ Tech Stack
+
+### Frontend
+- React 18
+- Redux + Redux Thunk
+- React Router
+- CSS Modules
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- Sequelize ORM
+- PostgreSQL
+- JWT (if implemented)
+
+## 🎨 Features
+
+- 🔍 Search and filter Pokémon
+- ➕ Create custom Pokémon
+- 📊 View detailed stats
+- 📱 Responsive design
+- 🌐 External API integration
+
+## 📄 License
+
+MIT License - see [LICENSE](./LICENSE) file for details.
